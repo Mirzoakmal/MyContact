@@ -97,7 +97,8 @@ class SpisokController extends Controller
      */
     public function show($id)
     {
-        //
+      $show_contact = Spisok::find($id);
+      return view('show',['contact'=>$show_contact,'layout'=>'show']);
     }
 
     /**
